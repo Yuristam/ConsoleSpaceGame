@@ -1,8 +1,14 @@
-﻿// Player's ship positions (X => abcissa, Y => ordinate)
+﻿using ConsoleSpaceGame;
+
+// Player's ship positions (X => abscissa, Y => ordinate)
 int userX = 50, userY = 27;
 
 while (true)
 {
+    Instructions.ShowInstructions();
+    Instructions.ShowLife();
+    Instructions.ShowScore();
+
     //========================================================================
 
     // this is the borders of the map
@@ -17,7 +23,7 @@ while (true)
 
     // player's positions (that will be in use)
     Console.SetCursorPosition(userX, userY);
-    Console.Write("-|[<^>]|-"); // player's ship
+    Console.Write("-[|]-{<^>}-[|]-");                   // player's ship
 
     ConsoleKeyInfo player = Console.ReadKey();
     switch (player.Key)
@@ -29,7 +35,7 @@ while (true)
             }
             break;
         case ConsoleKey.RightArrow:
-            if (userX + 1 != 72)
+            if (userX + 1 != 66)
             {
                 userX++; // move right 
             }
