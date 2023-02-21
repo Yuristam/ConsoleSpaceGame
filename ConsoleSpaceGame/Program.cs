@@ -3,8 +3,14 @@
 // Player's ship positions (X => abscissa, Y => ordinate)
 int userX = 50, userY = 27;
 
+//this is for hiding the cursor
+Console.CursorVisible= false;
+
+Instructions.ShowLoading();
+//Task.Delay(1000).Start();
 while (true)
 {
+    // Instructions: Life, Score, Instructions.
     Instructions.ShowInstructions();
     Instructions.ShowLife();
     Instructions.ShowScore();
